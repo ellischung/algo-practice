@@ -18,8 +18,23 @@ from collections import defaultdict
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        # default list for hashmap
-        ans = defaultdict(list)
+        # newMap = defaultdict(list)
+    
+        # for s in strs:
+        #     # "eat" -> "aet"
+        #     # "tea" -> "aet"
+        #     # "ate" -> "aet"
+        #     sortedS = "".join(sorted(s))
+        #     newMap[sortedS].append(s)
+        #     # { "aet" : [["eat"], ....]}
+
+        # print(newMap.items())
+        # print(newMap.values())
+        # print(newMap.keys())
+        # return newMap.values()
+        # above algo is O(nlogn) because of sorting
+        
+        ans = defaultdict(list) # default empty list for hash map
 
         # for each str, create a key with alpha array ex: 1 e, 1 a, 1 t for the word "eat"
         for s in strs:
